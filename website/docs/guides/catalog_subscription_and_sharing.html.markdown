@@ -227,7 +227,7 @@ Thus, we have two ways of operating:
   will happen every time the resource is read, which may introduce some delays in the operations if you were expecting
   `terraform refresh` to be quick. Despite the possible side effects, this is the recommended way.
 
-In the [examples directory](https://github.com/terraform-viettelidc/terraform-provider-vcloud/examples/subscribed_catalog) we can see a full
+In the [examples directory](https://github.com/viettelidc-provider/terraform-provider-vcloud/examples/subscribed_catalog) we can see a full
 example of a published and a subscribed catalog.
 
 ### Synchronisation fine tuning
@@ -337,10 +337,10 @@ run a refresh (if `synch_on_refresh` was set) or an update.
 In case #2 –which may also occur for #1 after the remedy was applied– the only remedy is **waiting** until the synchronisation is done.
 
 
-[catalog]: </providers/terraform-viettelidc/vcloud/latest/docs/resources/catalog> (vcloud_catalog)
-[shared]: </providers/terraform-viettelidc/vcloud/latest/docs/resources/catalog_access_control> (vcloud_catalog)
-[subscribed]: </providers/terraform-viettelidc/vcloud/latest/docs/resources/subscribed_catalog> (vcloud_subscribed_catalog)
-[item]: </providers/terraform-viettelidc/vcloud/latest/docs/resources/catalog_item> (vcloud_catalog_item)
-[media]: </providers/terraform-viettelidc/vcloud/latest/docs/resources/catalog_media> (vcloud_catalog_media)
-[template]: </providers/terraform-viettelidc/vcloud/latest/docs/resources/catalog_vapp_template> (vcloud_catalog_vapp_template)
+[catalog]: </providers/viettelidc-provider/vcloud/latest/docs/resources/catalog> (vcloud_catalog)
+[shared]: </providers/viettelidc-provider/vcloud/latest/docs/resources/catalog_access_control> (vcloud_catalog)
+[subscribed]: </providers/viettelidc-provider/vcloud/latest/docs/resources/subscribed_catalog> (vcloud_subscribed_catalog)
+[item]: </providers/viettelidc-provider/vcloud/latest/docs/resources/catalog_item> (vcloud_catalog_item)
+[media]: </providers/viettelidc-provider/vcloud/latest/docs/resources/catalog_media> (vcloud_catalog_media)
+[template]: </providers/viettelidc-provider/vcloud/latest/docs/resources/catalog_vapp_template> (vcloud_catalog_vapp_template)
 

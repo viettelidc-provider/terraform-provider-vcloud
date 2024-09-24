@@ -26,11 +26,11 @@ In order to complete the steps described in this guide, please be aware:
   Please check that the target VCLOUD appliance matches the criteria.
 * Terraform provider needs to be v3.12.0 or above.
 * Both CSE Server and the Bootstrap clusters require outbound Internet connectivity.
-* CSE 4.2 makes use of [ALB](/providers/terraform-viettelidc/vcloud/latest/docs/guides/nsxt_alb) capabilities.
+* CSE 4.2 makes use of [ALB](/providers/viettelidc-provider/vcloud/latest/docs/guides/nsxt_alb) capabilities.
 
 ## Installation process
 
--> To install CSE 4.2, this guide will make use of the example Terraform configuration located [here](https://github.com/terraform-viettelidc/terraform-provider-vcloud/tree/main/examples/container-service-extension/v4.2/install).
+-> To install CSE 4.2, this guide will make use of the example Terraform configuration located [here](https://github.com/viettelidc-provider/terraform-provider-vcloud/tree/main/examples/container-service-extension/v4.2/install).
 You can check it, customise it to your needs and apply. However, reading this guide first is recommended to understand what it does and how to use it.
 
 The installation process is split in two independent steps that must be run one after the other:
@@ -77,7 +77,7 @@ To customise it, the [step 1 configuration][step1] asks for the following variab
 
 * `vcdkeconfig_template_filepath` references a local file that defines the `VCDKEConfig` [RDE][rde] contents.
   It should be a JSON file with template variables that Terraform can interpret, like
-  [the RDE template file for CSE 4.2](https://github.com/terraform-viettelidc/terraform-provider-vcloud/tree/main/examples/container-service-extension/v4.2/entities/vcdkeconfig.json.template)
+  [the RDE template file for CSE 4.2](https://github.com/viettelidc-provider/terraform-provider-vcloud/tree/main/examples/container-service-extension/v4.2/entities/vcdkeconfig.json.template)
   used in the step 1 configuration, that can be rendered correctly with the Terraform built-in function `templatefile`.
   (Note: In `terraform.tfvars.example` the path for the CSE 4.2 RDE contents is already provided).
 * `capvcloud_version`: The version for CAPVCD. Must be **"1.2.0"** for CSE 4.2.0, or **"1.3.0"** for CSE 4.2.1.
@@ -550,37 +550,37 @@ Please read the specific guide on that topic [here][cse_cluster_management_guide
 
 Once all clusters are removed in the background by CSE Server, you may destroy the remaining infrastructure with Terraform command.
 
-[alb]: /providers/terraform-viettelidc/vcloud/latest/docs/guides/nsxt_alb
-[api_token]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/api_token
-[catalog]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/catalog
-[catalog_vapp_template_ds]: /providers/terraform-viettelidc/vcloud/latest/docs/data-sources/catalog_vapp_template
-[cse_cluster_management_guide]: /providers/terraform-viettelidc/vcloud/latest/docs/guides/container_service_extension_4_x_cluster_management
+[alb]: /providers/viettelidc-provider/vcloud/latest/docs/guides/nsxt_alb
+[api_token]: /providers/viettelidc-provider/vcloud/latest/docs/resources/api_token
+[catalog]: /providers/viettelidc-provider/vcloud/latest/docs/resources/catalog
+[catalog_vapp_template_ds]: /providers/viettelidc-provider/vcloud/latest/docs/data-sources/catalog_vapp_template
+[cse_cluster_management_guide]: /providers/viettelidc-provider/vcloud/latest/docs/guides/container_service_extension_4_x_cluster_management
 [cse_docs]: https://docs.vmware.com/en/VMware-Cloud-Director-Container-Service-Extension/index.html
-[edge_cluster]: /providers/terraform-viettelidc/vcloud/latest/docs/data-sources/nsxt_edge_cluster
-[edge_gateway]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/nsxt_edgegateway
-[global_role]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/global_role
-[nat_rule]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/nsxt_nat_rule
-[nsxt_manager]: /providers/terraform-viettelidc/vcloud/latest/docs/data-sources/nsxt_manager
-[nsxt_tier0_router]: /providers/terraform-viettelidc/vcloud/latest/docs/data-sources/nsxt_tier0_router
-[org]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/org
-[org_d]: /providers/terraform-viettelidc/vcloud/latest/docs/data-sources/org
+[edge_cluster]: /providers/viettelidc-provider/vcloud/latest/docs/data-sources/nsxt_edge_cluster
+[edge_gateway]: /providers/viettelidc-provider/vcloud/latest/docs/resources/nsxt_edgegateway
+[global_role]: /providers/viettelidc-provider/vcloud/latest/docs/resources/global_role
+[nat_rule]: /providers/viettelidc-provider/vcloud/latest/docs/resources/nsxt_nat_rule
+[nsxt_manager]: /providers/viettelidc-provider/vcloud/latest/docs/data-sources/nsxt_manager
+[nsxt_tier0_router]: /providers/viettelidc-provider/vcloud/latest/docs/data-sources/nsxt_tier0_router
+[org]: /providers/viettelidc-provider/vcloud/latest/docs/resources/org
+[org_d]: /providers/viettelidc-provider/vcloud/latest/docs/data-sources/org
 [product_matrix]: https://interopmatrix.vmware.com/Interoperability?col=659,&row=0
-[provider_gateway]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/external_network_v2
-[provider_vdc]: /providers/terraform-viettelidc/vcloud/latest/docs/data-sources/provider_vdc
-[rights_bundle]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/rights_bundle
-[rde]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/rde
-[rde_interface]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/rde_interface
-[rde_type]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/rde_type
-[rde_interface_behavior]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/rde_interface_behavior
-[rde_type_behavior_acl]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/rde_type_behavior_acl
-[role]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/role
-[routed_network]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/network_routed_v2
-[sizing]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/vm_sizing_policy
-[step1]: https://github.com/terraform-viettelidc/terraform-provider-vcloud/tree/main/examples/container-service-extension/v4.2/install/step1
-[step2]: https://github.com/terraform-viettelidc/terraform-provider-vcloud/tree/main/examples/container-service-extension/v4.2/install/step2
+[provider_gateway]: /providers/viettelidc-provider/vcloud/latest/docs/resources/external_network_v2
+[provider_vdc]: /providers/viettelidc-provider/vcloud/latest/docs/data-sources/provider_vdc
+[rights_bundle]: /providers/viettelidc-provider/vcloud/latest/docs/resources/rights_bundle
+[rde]: /providers/viettelidc-provider/vcloud/latest/docs/resources/rde
+[rde_interface]: /providers/viettelidc-provider/vcloud/latest/docs/resources/rde_interface
+[rde_type]: /providers/viettelidc-provider/vcloud/latest/docs/resources/rde_type
+[rde_interface_behavior]: /providers/viettelidc-provider/vcloud/latest/docs/resources/rde_interface_behavior
+[rde_type_behavior_acl]: /providers/viettelidc-provider/vcloud/latest/docs/resources/rde_type_behavior_acl
+[role]: /providers/viettelidc-provider/vcloud/latest/docs/resources/role
+[routed_network]: /providers/viettelidc-provider/vcloud/latest/docs/resources/network_routed_v2
+[sizing]: /providers/viettelidc-provider/vcloud/latest/docs/resources/vm_sizing_policy
+[step1]: https://github.com/viettelidc-provider/terraform-provider-vcloud/tree/main/examples/container-service-extension/v4.2/install/step1
+[step2]: https://github.com/viettelidc-provider/terraform-provider-vcloud/tree/main/examples/container-service-extension/v4.2/install/step2
 [tkgm_docs]: https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/index.html
-[user]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/org_user
-[ui_plugin]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/ui_plugin
-[catalog_vapp_template]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/catalog_vapp_template
-[vdc]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/org_vdc
-[vm]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/vapp_vm
+[user]: /providers/viettelidc-provider/vcloud/latest/docs/resources/org_user
+[ui_plugin]: /providers/viettelidc-provider/vcloud/latest/docs/resources/ui_plugin
+[catalog_vapp_template]: /providers/viettelidc-provider/vcloud/latest/docs/resources/catalog_vapp_template
+[vdc]: /providers/viettelidc-provider/vcloud/latest/docs/resources/org_vdc
+[vm]: /providers/viettelidc-provider/vcloud/latest/docs/resources/vapp_vm

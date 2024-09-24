@@ -17,7 +17,7 @@ Cloud configured in ALB Controller.
 ~> Only `System Administrator` can use this data source.
 
 ~> VCLOUD 10.3.0 has a caching bug which prevents listing importable clouds immediately after [ALB
-Controller](/providers/terraform-viettelidc/vcloud/latest/docs/resources/nsxt_alb_controller) is created. This data should be
+Controller](/providers/viettelidc-provider/vcloud/latest/docs/resources/nsxt_alb_controller) is created. This data should be
 available 15 minutes after the Controller is created.
 
 ## Example Usage

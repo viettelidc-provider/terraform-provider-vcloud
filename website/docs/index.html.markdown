@@ -11,7 +11,7 @@ description: |-
 The Viettel IDC Cloud provider is used to interact with the resources supported by Viettel IDC Cloud. The provider needs to be configured with the proper credentials before it can be used.
 
 Use the navigation to the left to read about the available resources. Please refer to
-[CHANGELOG.md](https://github.com/terraform-viettelidc/terraform-provider-vcloud/blob/main/CHANGELOG.md)
+[CHANGELOG.md](https://github.com/viettelidc-provider/terraform-provider-vcloud/blob/main/CHANGELOG.md)
 to track feature additions.
 
 ~> **NOTE:** The Viettel IDC Cloud Provider documentation pages include *v2.x+* or *v3.x+* labels in resource and/or field
@@ -505,7 +505,7 @@ resource "vcloud_org" "my_org" {
 }
 ```
 
-Note that this argument **does not affect metadata of the [data source filters](/providers/terraform-viettelidc/vcloud/latest/docs/guides/data_source_filters)**.
+Note that this argument **does not affect metadata of the [data source filters](/providers/viettelidc-provider/vcloud/latest/docs/guides/data_source_filters)**.
 
 ## Connection Cache (*2.0+*)
 
@@ -514,7 +514,7 @@ multiple connections. There is a cache engine, disabled by default, which can be
 environment variable. When enabled, the provider will not reconnect, but reuse an active connection for up to 20 
 minutes, and then connect again.
 
-[service-account]: /providers/terraform-viettelidc/vcloud/latest/docs/resources/service_account
-[service-account-script]: https://github.com/terraform-viettelidc/terraform-provider-vcloud/blob/main/scripts/create_service_account.sh
-[api-token]: /providers/terraform-viettelidc/vcloud/latest/docs/resource/api_token
+[service-account]: /providers/viettelidc-provider/vcloud/latest/docs/resources/service_account
+[service-account-script]: https://github.com/viettelidc-provider/terraform-provider-vcloud/blob/main/scripts/create_service_account.sh
+[api-token]: /providers/viettelidc-provider/vcloud/latest/docs/resource/api_token
 
