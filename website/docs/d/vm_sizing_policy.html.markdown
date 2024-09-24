@@ -1,0 +1,38 @@
+---
+layout: "vcd"
+page_title: "Viettel IDC Cloud: vcloud_vm_sizing_policy"
+sidebar_current: "docs-vcd-datasource-vm-sizing-policy"
+description: |-
+  Provides a Viettel IDC Cloud VM sizing policy data source. This can be
+  used to read VM sizing policy.
+---
+
+# vcloud\_vm\_sizing\_policy
+
+Provides a Viettel IDC Cloud VM sizing policy data source. This can be
+used to read VM sizing policy.
+
+Supported in provider *v3.0+* and requires VCLOUD 10.0+
+
+## Example Usage
+
+```hcl
+data "vcloud_vm_sizing_policy" "tf-policy-name" {
+  name = "my-rule"
+}
+output "policyId" {
+  value = data.vcloud_vm_sizing_policy.tf-policy-name.id
+}
+```
+## Argument Reference
+
+The following arguments are supported:
+
+* `name` - (Required) The name VM sizing policy
+
+-> **Note:**  
+Previously, it was incorrectly stated that the `org` argument was required. In fact, it is not, and it has been deprecated in the resource schema.
+To preserve compatibility until the next release, though, the parameter is still parsed, but ignored.
+
+All arguments defined in [`vcloud_vm_sizing_policy`](/providers/terraform-viettelidc/vcloud/latest/docs/resources/vm_sizing_policy#argument-reference) are supported.
+

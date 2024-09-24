@@ -1,0 +1,34 @@
+---
+layout: "vcd"
+page_title: "Viettel IDC Cloud: vcloud_solution_add_on_instance_publish"
+sidebar_current: "docs-vcd-data-source-solution-add-on-instance-publish"
+description: |-
+  Provides a data source to read publishing configuration of Solution Add-On Instances in Cloud Director.
+---
+
+# vcloud\_solution\_add\_on\_instance\_publish
+
+Supported in provider *v3.13+* and VCLOUD 10.4.1+.
+
+Provides a data source to read publishing configuration of Solution Add-On Instances in Cloud Director.
+
+## Example Usage
+
+```hcl
+data "vcloud_solution_add_on_instance_publish" "public" {
+  add_on_instance_name = "MyDseInstanceName"
+}
+```
+
+## Argument Reference
+
+The following arguments are supported:
+
+* `add_on_instance_name` - (Required) The name of Solution Add-On Instance
+
+
+## Attribute Reference
+
+All the arguments and attributes defined in
+[`vcloud_solution_add_on_instance_publish`](/providers/terraform-viettelidc/vcloud/latest/docs/resources/solution_add_on_instance_publish) resource are
+available.

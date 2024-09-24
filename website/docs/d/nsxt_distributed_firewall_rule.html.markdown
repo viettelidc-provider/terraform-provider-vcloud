@@ -1,0 +1,46 @@
+---
+layout: "vcd"
+page_title: "Viettel IDC Cloud: vcloud_nsxt_distributed_firewall_rule"
+sidebar_current: "docs-vcd-data-source-nsxt-distributed-firewall-rule"
+description: |-
+  The Distributed Firewall data source reads a single rule for a particular VDC Group.
+---
+
+# vcloud\_nsxt\_distributed\_firewall\_rule
+
+The Distributed Firewall data source reads a single rule for a particular VDC Group.
+
+-> There is a different data source
+[`vcloud_nsxt_distributed_firewall`](/providers/terraform-viettelidc/vcloud/latest/docs/data-sources/nsxt_distributed_firewall)
+resource available that can fetch all firewall rules.
+
+## Example Usage
+
+```hcl
+data "vcloud_vdc_group" "g1" {
+  org  = "my-org" # Optional, can be inherited from Provider configuration
+  name = "my-vdc-group"
+}
+
+data "vcloud_nsxt_distributed_firewall_rule" "r1" {
+  org          = "my-org" # Optional, can be inherited from Provider configuration
+  vdc_group_id = data.vcloud_vdc_group.g1.id
+
+  name = "rule1"
+}
+```
+
+## Argument Reference
+
+The following arguments are supported:
+
+* `org` - (Optional) The name of organization in which Distributed Firewall is located. Optional if
+  defined at provider level.
+* `vdc_group_id` - (Required) The ID of a VDC Group
+* `name` - (Required) The name of firewall rule
+
+## Attribute Reference
+
+All the arguments and attributes defined in
+[`vcloud_nsxt_distributed_firewall_rule`](/providers/terraform-viettelidc/vcloud/latest/docs/resources/nsxt_distributed_firewall_rule)
+resource are available.

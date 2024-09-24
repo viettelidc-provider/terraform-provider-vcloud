@@ -1,0 +1,55 @@
+---
+layout: "vcd"
+page_title: "Viettel IDC Cloud: vcloud_nsxt_edgegateway_bgp_ip_prefix_list"
+sidebar_current: "docs-vcd-datasource-nsxt-edgegateway-bgp-ip-prefix-list"
+description: |-
+  Provides a data source to manage NSX-T Edge Gateway BGP IP Prefix Lists. IP prefix lists can
+  contain single or multiple IP addresses and can be used to assign BGP neighbors with access
+  permissions for route advertisement.
+---
+
+# vcloud\_nsxt\_edgegateway\_bgp\_ip\_prefix\_list
+
+Supported in provider *v3.7+* and VCLOUD 10.2+ with NSX-T
+
+Provides a resource to manage NSX-T Edge Gateway BGP IP Prefix Lists. IP prefix lists can contain 
+single or multiple IP addresses and can be used to assign BGP neighbors with access permissions 
+for route advertisement.
+
+## Example Usage
+
+```hcl
+data "vcloud_vdc_group" "g1" {
+  org  = "my-org"
+  name = "my-vdc-group"
+}
+
+data "vcloud_nsxt_edgegateway" "testing" {
+  org      = "my-org"
+  owner_id = data.vcloud_vdc_group.g1.id
+
+  name = "my-edge-gateway"
+}
+
+data "vcloud_nsxt_edgegateway_bgp_ip_prefix_list" "testing" {
+  org             = "my-org"
+  edge_gateway_id = data.vcloud_nsxt_edgegateway.testing.id
+
+  name = "my-bgp-prefix-list"
+}
+```
+
+## Argument Reference
+
+The following arguments are supported:
+
+* `org` - (Optional) The name of organization to which the edge gateway belongs. Optional if defined at provider level.
+* `edge_gateway_id` - (Required) An ID of NSX-T Edge Gateway. Can be lookup up using
+  [vcloud_nsxt_edgegateway](/providers/terraform-viettelidc/vcloud/latest/docs/data-sources/nsxt_edgegateway) data source
+* `name` - (Required) A name of existing BGP IP Prefix List in specified Edge Gateway
+
+## Attribute Reference
+
+All the arguments and attributes defined in
+[`vcloud_nsxt_edgegateway_bgp_ip_prefix_list`](/providers/terraform-viettelidc/vcloud/latest/docs/resources/nsxt_edgegateway_bgp_ip_prefix_list)
+resource are available.
