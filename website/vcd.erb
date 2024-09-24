@@ -1,0 +1,820 @@
+<% wrap_layout :inner do %>
+  <% content_for :sidebar do %>
+    <div class="docs-sidebar hidden-print affix-top" role="complementary">
+      <ul class="nav docs-sidenav">
+        <li<%= sidebar_current("docs-home") %>>
+          <a href="/docs/providers/index.html">All Providers</a>
+        </li>
+
+        <li<%= sidebar_current("docs-vcd-index") %>>
+          <a href="/docs/providers/vcd/index.html">Viettel IDC Cloud Provider</a>
+        </li>
+
+        <li<%= sidebar_current("docs-vcd-guides") %>>
+          <a href="#">Guides</a>
+          <ul class="nav nav-visible">
+            <li<%= sidebar_current("docs-vcd-guides-filters") %>>
+              <a href="/docs/providers/vcd/guides/data_source_filters.html">Data source filters</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-roles") %>>
+              <a href="/docs/providers/vcd/guides/roles_management.html">Roles management</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-vm-guest-customization") %>>
+              <a href="/docs/providers/vcd/guides/vm_guest_customization.html">VM Guest customization</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-nsxt-alb") %>>
+              <a href="/docs/providers/vcd/guides/nsxt_alb.html">Avi load balancer</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-vdc-groups") %>>
+              <a href="/docs/providers/vcd/guides/vdc_groups.html">VDC Groups</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-cse-3-1-x") %>>
+              <a href="/docs/providers/vcd/guides/container_service_extension_3_1_x.html">Container Service Extension v3.1.x</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-cse-4-x-install") %>>
+              <a href="/docs/providers/vcd/guides/container_service_extension_4_x_install.html">Container Service Extension v4.1 installation</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-cse-4-x-cluster-management") %>>
+              <a href="/docs/providers/vcd/guides/container_service_extension_4_x_cluster_management.html">Container Service Extension v4.1 Kubernetes clusters management</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-catalog-subscription-and-sharing") %>>
+              <a href="/docs/providers/vcd/guides/catalog_subscription_and_sharing.html">Catalog subscription and sharing</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-ip-spaces") %>>
+              <a href="/docs/providers/vcd/guides/ip_spaces.html">IP Spaces</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-importing-resources") %>>
+              <a href="/docs/providers/vcd/guides/importing_resources.html">Importing resources</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-site-org-association") %>>
+              <a href="/docs/providers/vcd/guides/site_org_association.html">Site and organization association</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-guides-data-solution-extension") %>>
+              <a href="/docs/providers/vcd/guides/data_solution_extension.html">Data Solution Extension and Solution Add-Ons</a>
+            </li>
+          </ul>
+        </li>
+
+        <li<%= sidebar_current("docs-vcd-data-source") %>>
+          <a href="#">Data Sources</a>
+          <ul class="nav">
+            <li<%= sidebar_current("docs-vcd-data-source-org") %>>
+              <a href="/docs/providers/vcd/d/org.html">vcd_org</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-org-group") %>>
+              <a href="/docs/providers/vcd/d/org_group.html">vcd_org_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-org-user") %>>
+              <a href="/docs/providers/vcd/d/org_user.html">vcd_org_user</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-org-vdc") %>>
+              <a href="/docs/providers/vcd/d/org_vdc.html">vcd_org_vdc</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-catalog") %>>
+              <a href="/docs/providers/vcd/d/catalog.html">vcd_catalog</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-subscribed-catalog") %>>
+              <a href="/docs/providers/vcd/d/subscribed_catalog.html">vcd_subscribed_catalog</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-catalog-item") %>>
+              <a href="/docs/providers/vcd/d/catalog_item.html">vcd_catalog_item</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-catalog-vapp-template") %>>
+              <a href="/docs/providers/vcd/d/catalog_vapp_template.html">vcd_catalog_vapp_template</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-catalog-media") %>>
+              <a href="/docs/providers/vcd/d/catalog_media.html">vcd_catalog_media</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-external-network") %>>
+              <a href="/docs/providers/vcd/d/external_network.html">vcd_external_network</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-external-network-v2") %>>
+              <a href="/docs/providers/vcd/d/external_network_v2.html">vcd_external_network_v2</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-edgegateway") %>>
+              <a href="/docs/providers/vcd/d/edgegateway.html">vcd_edgegateway</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-network-routed") %>>
+              <a href="/docs/providers/vcd/d/network_routed.html">vcd_network_routed</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-network-routed-v2") %>>
+              <a href="/docs/providers/vcd/d/network_routed_v2.html">vcd_network_routed_v2</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-network-imported") %>>
+              <a href="/docs/providers/vcd/d/nsxt_network_imported.html">vcd_nsxt_network_imported</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-network-isolated") %>>
+              <a href="/docs/providers/vcd/d/network_isolated.html">vcd_network_isolated</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-network-isolated-v2") %>>
+              <a href="/docs/providers/vcd/d/network_isolated_v2.html">vcd_network_isolated_v2</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-network-dhcp") %>>
+              <a href="/docs/providers/vcd/d/nsxt_network_dhcp.html">vcd_nsxt_network_dhcp</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-network-dhcp-binding") %>>
+              <a href="/docs/providers/vcd/d/nsxt_network_dhcp_binding.html">vcd_nsxt_network_dhcp_binding</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-network-direct") %>>
+              <a href="/docs/providers/vcd/d/network_direct.html">vcd_network_direct</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vapp") %>>
+              <a href="/docs/providers/vcd/d/vapp.html">vcd_vapp</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vapp-network") %>>
+              <a href="/docs/providers/vcd/d/vapp_network.html">vcd_vapp_network</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vapp-org-network") %>>
+              <a href="/docs/providers/vcd/d/vapp_org_network.html">vcd_vapp_org_network</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vapp-vm") %>>
+              <a href="/docs/providers/vcd/d/vapp_vm.html">vcd_vapp_vm</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vm") %>>
+              <a href="/docs/providers/vcd/d/vm.html">vcd_vm</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vm-affinity-rule") %>>
+              <a href="/docs/providers/vcd/d/vm_affinity_rule.html">vcd_vm_affinity_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vm-sizing-policy") %>>
+              <a href="/docs/providers/vcd/d/vm_sizing_policy.html">vcd_vm_sizing_policy</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vm-group") %>>
+              <a href="/docs/providers/vcd/d/vm_group.html">vcd_vm_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vm-placement-policy") %>>
+              <a href="/docs/providers/vcd/d/vm_placement_policy.html">vcd_vm_placement_policy</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-independent-disk") %>>
+              <a href="/docs/providers/vcd/d/independent_disk.html">vcd_independent_disk</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-lb-service-monitor") %>>
+              <a href="/docs/providers/vcd/d/lb_service_monitor.html">vcd_lb_service_monitor</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-lb-server-pool") %>>
+              <a href="/docs/providers/vcd/d/lb_server_pool.html">vcd_lb_server_pool</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-lb-app-profile") %>>
+              <a href="/docs/providers/vcd/d/lb_app_profile.html">vcd_lb_app_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-lb-app-rule") %>>
+              <a href="/docs/providers/vcd/d/lb_app_rule.html">vcd_lb_app_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-lb-virtual-server") %>>
+              <a href="/docs/providers/vcd/d/lb_virtual_server.html">vcd_lb_virtual_server</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxv-dnat") %>>
+              <a href="/docs/providers/vcd/d/nsxv_dnat.html">vcd_nsxv_dnat</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxv-snat") %>>
+              <a href="/docs/providers/vcd/d/nsxv_snat.html">vcd_nsxv_snat</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxv-firewall-rule") %>>
+              <a href="/docs/providers/vcd/d/nsxv_firewall_rule.html">vcd_nsxv_firewall_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-ipset") %>>
+              <a href="/docs/providers/vcd/d/nsxv_ip_set.html">vcd_nsxv_ip_set</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxv-dhcp-relay") %>>
+              <a href="/docs/providers/vcd/d/nsxv_dhcp_relay.html">vcd_nsxv_dhcp_relay</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vcenter") %>>
+              <a href="/docs/providers/vcd/d/vcenter.html">vcd_vcenter</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-provider-vdc") %>>
+              <a href="/docs/providers/vcd/d/provider_vdc.html">vcd_provider_vdc</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-org-vdc-template") %>>
+              <a href="/docs/providers/vcd/d/org_vdc_template.html">vcd_org_vdc_template</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-portgroup") %>>
+              <a href="/docs/providers/vcd/d/portgroup.html">vcd_portgroup</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-manager") %>>
+              <a href="/docs/providers/vcd/d/nsxt_manager.html">vcd_nsxt_manager</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-edge-cluster") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edge_cluster.html">vcd_nsxt_edge_cluster</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-edge-gateway") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway.html">vcd_nsxt_edgegateway</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-tier0-router") %>>
+              <a href="/docs/providers/vcd/d/nsxt_tier0_router.html">vcd_nsxt_tier0_router</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-resource-list") %>>
+              <a href="/docs/providers/vcd/d/resource_list.html">vcd_resource_list</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-resource-schema") %>>
+              <a href="/docs/providers/vcd/d/resource_schema.html">vcd_resource_schema</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-storage-profile") %>>
+              <a href="/docs/providers/vcd/d/storage_profile.html">vcd_storage_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-security-group") %>>
+              <a href="/docs/providers/vcd/d/nsxt_security_group.html">vcd_nsxt_security_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-right") %>>
+              <a href="/docs/providers/vcd/d/right.html">vcd_right</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-role") %>>
+              <a href="/docs/providers/vcd/d/role.html">vcd_role</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-global-role") %>>
+              <a href="/docs/providers/vcd/d/global_role.html">vcd_global_role</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-rights-bundle") %>>
+              <a href="/docs/providers/vcd/d/rights_bundle.html">vcd_rights_bundle</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datas-source-nsxt-ip-set") %>>
+              <a href="/docs/providers/vcd/d/nsxt_ip_set.html">vcd_nsxt_ip_set</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-security-group") %>>
+              <a href="/docs/providers/vcd/d/nsxt_security_group.html">vcd_nsxt_security_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-firewall") %>>
+              <a href="/docs/providers/vcd/d/nsxt_firewall.html">vcd_nsxt_firewall</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-app-port-profile") %>>
+              <a href="/docs/providers/vcd/d/nsxt_app_port_profile.html">vcd_nsxt_app_port_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-nat-rule") %>>
+              <a href="/docs/providers/vcd/d/nsxt_nat_rule.html">vcd_nsxt_nat_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-ipsec-vpn-tunnel") %>>
+              <a href="/docs/providers/vcd/d/nsxt_ipsec_vpn_tunnel.html">vcd_nsxt_ipsec_vpn_tunnel</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-edgegateway-l2-vpn-tunnel") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_l2_vpn_tunnel.html">vcd_nsxt_edgegateway_l2_vpn_tunnel</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-alb-controller") %>>
+              <a href="/docs/providers/vcd/d/nsxt_alb_controller.html">vcd_nsxt_alb_controller</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-alb-cloud") %>>
+              <a href="/docs/providers/vcd/d/nsxt_alb_cloud.html">vcd_nsxt_alb_cloud</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-alb-importable-cloud") %>>
+              <a href="/docs/providers/vcd/d/nsxt_alb_importable_cloud.html">vcd_nsxt_alb_importable_cloud</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-alb-service-engine-group") %>>
+              <a href="/docs/providers/vcd/d/nsxt_alb_service_engine_group.html">vcd_nsxt_alb_service_engine_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-alb-settings") %>>
+              <a href="/docs/providers/vcd/d/nsxt_alb_settings.html">vcd_nsxt_alb_settings</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-alb-pool") %>>
+              <a href="/docs/providers/vcd/d/nsxt_alb_pool.html">vcd_nsxt_alb_pool</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-alb-virtual-service") %>>
+              <a href="/docs/providers/vcd/d/nsxt_alb_virtual_service.html">vcd_nsxt_alb_virtual_service</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-alb-edgegateway-service-engine-group") %>>
+              <a href="/docs/providers/vcd/d/nsxt_alb_edgegateway_service_engine_group.html">vcd_nsxt_alb_edgegateway_service_engine_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-certificate-library") %>>
+              <a href="/docs/providers/vcd/d/certificate_library.html">vcd_library_certificate</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vdc-group") %>>
+              <a href="/docs/providers/vcd/d/vdc_group.html">vcd_vdc_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-distributed-firewall") %>>
+              <a href="/docs/providers/vcd/d/nsxt_distributed_firewall.html">vcd_nsxt_distributed_firewall</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-distributed-firewall-rule") %>>
+              <a href="/docs/providers/vcd/d/nsxt_distributed_firewall_rule.html">vcd_nsxt_distributed_firewall_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-network-context-profile") %>>
+              <a href="/docs/providers/vcd/d/nsxt_network_context_profile.html">vcd_nsxt_network_context_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-edgegateway-bgp-neighbor") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_bgp_neighbor.html">vcd_nsxt_edgegateway_bgp_neighbor</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-edgegateway-bgp-ip-prefix-list") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_bgp_ip_prefix_list.html">vcd_nsxt_edgegateway_bgp_ip_prefix_list</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-dynamic-security-group") %>>
+              <a href="/docs/providers/vcd/d/nsxt_network_context_profile.html">vcd_nsxt_dynamic_security_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-edgegateway-bgp-configuration") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_bgp_configuration.html">vcd_nsxt_edgegateway_bgp_configuration</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxv-distributed-firewall") %>>
+              <a href="/docs/providers/vcd/d/nsxv_distributed_firewall.html">vcd_nsxv_distributed_firewall</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxv-application-finder") %>>
+              <a href="/docs/providers/vcd/d/nsxv_application_finder.html">vcd_nsxv_application_finder</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxv-application-group") %>>
+              <a href="/docs/providers/vcd/d/nsxv_application_group.html">vcd_nsxv_application_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxv-application") %>>
+              <a href="/docs/providers/vcd/d/nsxv_application.html">vcd_nsxv_application</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-org-ldap") %>>
+              <a href="/docs/providers/vcd/d/org_ldap.html">vcd_org_ldap</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-rde-interface") %>>
+              <a href="/docs/providers/vcd/d/rde_interface.html">vcd_rde_interface</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-rde-interface-behavior") %>>
+              <a href="/docs/providers/vcd/d/rde_interface_behavior.html">vcd_rde_interface_behavior</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-rde-type") %>>
+              <a href="/docs/providers/vcd/d/rde_type.html">vcd_rde_type</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-rde-type-behavior") %>>
+              <a href="/docs/providers/vcd/d/rde_type_behavior.html">vcd_rde_type_behavior</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-rde-type-behavior-acl") %>>
+              <a href="/docs/providers/vcd/d/rde_type_behavior_acl.html">vcd_rde_type_behavior_acl</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-rde") %>>
+              <a href="/docs/providers/vcd/d/rde.html">vcd_rde</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-rde-behavior-invocation") %>>
+              <a href="/docs/providers/vcd/d/rde_behavior_invocation.html">vcd_rde_behavior_invocation</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-task") %>>
+              <a href="/docs/providers/vcd/d/task.html">vcd_task</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-qos-profile") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_qos_profile.html">vcd_nsxt_edgegateway_qos_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-edge-rate-limiting") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_rate_limiting.html">vcd_nsxt_edgegateway_rate_limiting</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-ip-space") %>>
+              <a href="/docs/providers/vcd/d/ip_space.html">vcd_ip_space</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-ip-space-uplink") %>>
+              <a href="/docs/providers/vcd/d/ip_space_uplink.html">vcd_ip_space_uplink</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-ip-space-ip-allocation") %>>
+              <a href="/docs/providers/vcd/d/ip_space_ip_allocation.html">vcd_ip_space_ip_allocation</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-ip-space-custom-quota") %>>
+              <a href="/docs/providers/vcd/d/ip_space_custom_quota.html">vcd_ip_space_custom_quota</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-edge-dhcp-forwarding") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_dhcp_forwarding.html">vcd_nsxt_edgegateway_dhcp_forwarding</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-edge-dhcpv6") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_dhcpv6.html">vcd_nsxt_edgegateway_dhcpv6</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-org-saml") %>>
+              <a href="/docs/providers/vcd/d/org_saml.html">vcd_org_saml</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-org-saml-metadata") %>>
+              <a href="/docs/providers/vcd/d/org_saml_metadata.html">vcd_org_saml_metadata</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-org-oidc") %>>
+              <a href="/docs/providers/vcd/d/org_oidc.html">vcd_org_oidc</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-edgegateway-static-route") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_static_route.html">vcd_nsxt_edgegateway_static_route</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-network-pool") %>>
+              <a href="/docs/providers/vcd/d/network_pool.html">network_pool</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-resource-pool") %>>
+              <a href="/docs/providers/vcd/d/resource_pool.html">resource_pool</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-ui-plugin") %>>
+              <a href="/docs/providers/vcd/d/ui_plugin.html">vcd_ui_plugin</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-service-account") %>>
+              <a href="/docs/providers/vcd/d/service_account.html">vcd_service_account</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-segment-ip-discovery-profile") %>>
+              <a href="/docs/providers/vcd/d/nsxt_segment_ip_discovery_profile.html">vcd_nsxt_segment_ip_discovery_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-segment-mac-discovery-profile") %>>
+              <a href="/docs/providers/vcd/d/nsxt_segment_mac_discovery_profile.html">vcd_nsxt_segment_mac_discovery_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-segment-qos-profile") %>>
+              <a href="/docs/providers/vcd/d/nsxt_segment_qos_profile.html">vcd_nsxt_segment_qos_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-segment-security-profile") %>>
+              <a href="/docs/providers/vcd/d/nsxt_segment_security_profile.html">vcd_nsxt_segment_security_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-segment-spoof-guard-profile") %>>
+              <a href="/docs/providers/vcd/d/vcd_nsxt_segment_spoof_guard_profile.html">vcd_nsxt_segment_spoof_guard_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-segment-spoof-guard-profile") %>>
+              <a href="/docs/providers/vcd/r/nsxt_segment_profile_template.html">vcd_nsxt_segment_profile_template</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-segment-profile-template") %>>
+              <a href="/docs/providers/vcd/d/nsxt_global_default_segment_profile_template.html">vcd_nsxt_global_default_segment_profile_template</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-segment-profile-template") %>>
+              <a href="/docs/providers/vcd/d/org_vdc_nsxt_network_profile.html">vcd_org_vdc_nsxt_network_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-nsxt-network-segment-profile") %>>
+              <a href="/docs/providers/vcd/d/nsxt_network_segment_profile.html">vcd_nsxt_network_segment_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-nsxt-edgegateway-dns") %>>
+              <a href="/docs/providers/vcd/d/nsxt_edgegateway_dns.html">vcd_nsxt_edgegateway_dns</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-datasource-vgpu-profile") %>>
+              <a href="/docs/providers/vcd/d/vgpu_profile.html">vcd_vgpu_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-vm-vgpu-policy") %>>
+              <a href="/docs/providers/vcd/d/vm_vgpu_policy.html">vcd_vm_vgpu_policy</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-cse-kubernetes-cluster") %>>
+              <a href="/docs/providers/vcd/d/cse_kubernetes_cluster.html">vcd_cse_kubernetes_cluster</a>
+            </li>
+             <li<%= sidebar_current("docs-vcd-data-source-version") %>>
+              <a href="/docs/providers/vcd/d/version.html">vcd_version</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-solution-landing-zone") %>>
+              <a href="/docs/providers/vcd/d/solution_landing_zone.html">vcd_solution_landing_zone</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-solution-add-on") %>>
+              <a href="/docs/providers/vcd/d/solution_add_on.html">vcd_solution_add_on</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-solution-add-on-instance") %>>
+              <a href="/docs/providers/vcd/d/solution_add_on_instance.html">vcd_solution_add_on_instance</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-solution-add-on-instance-publish") %>>
+              <a href="/docs/providers/vcd/d/solution_add_on_instance_publish.html">vcd_solution_add_on_instance_publish</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-dse-registry-configuration") %>>
+              <a href="/docs/providers/vcd/d/dse_registry_configuration.html">vcd_dse_registry_configuration</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-dse-solution-publish") %>>
+              <a href="/docs/providers/vcd/d/dse_solution_publish.html">vcd_dse_solution_publish</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-multisite-site") %>>
+              <a href="/docs/providers/vcd/d/multisite_site.html">vcd_multisite_site</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-multisite-site-data") %>>
+              <a href="/docs/providers/vcd/d/multisite_site_data.html">vcd_multisite_site_data</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-multisite-org-data") %>>
+              <a href="/docs/providers/vcd/d/multisite_org_data.html">vcd_multisite_org_data</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-multisite-site-association") %>>
+              <a href="/docs/providers/vcd/d/multisite_site_association.html">vcd_multisite_site_association</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-data-source-multisite-org-association") %>>
+              <a href="/docs/providers/vcd/d/multisite_org_association.html">vcd_multisite_org_association</a>
+            </li>
+          </ul>
+        </li>
+        <li<%= sidebar_current("docs-vcd-resource") %>>
+          <a href="#">Resources</a>
+          <ul class="nav nav-visible">
+            <li<%= sidebar_current("docs-vcd-resource-org") %>>
+              <a href="/docs/providers/vcd/r/org.html">vcd_org</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-org-user") %>>
+              <a href="/docs/providers/vcd/r/org_user.html">vcd_org_user</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-org-group") %>>
+              <a href="/docs/providers/vcd/r/org_group.html">vcd_org_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-org-vdc") %>>
+              <a href="/docs/providers/vcd/r/org_vdc.html">vcd_org_vdc</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-catalog") %>>
+              <a href="/docs/providers/vcd/r/catalog.html">vcd_catalog</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-subscribed-catalog") %>>
+              <a href="/docs/providers/vcd/r/subscribed_catalog.html">vcd_subscribed_catalog</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-catalog-item") %>>
+              <a href="/docs/providers/vcd/r/catalog_item.html">vcd_catalog_item</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-catalog-vapp-template") %>>
+              <a href="/docs/providers/vcd/r/catalog_vapp_template.html">vcd_catalog_vapp_template</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-catalog-media") %>>
+              <a href="/docs/providers/vcd/r/catalog_media.html">vcd_catalog_media</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-external-network") %>>
+              <a href="/docs/providers/vcd/r/external_network.html">vcd_external_network</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-external-network-v2") %>>
+              <a href="/docs/providers/vcd/r/external_network_v2.html">vcd_external_network_v2</a>
+            </li>     
+            <li<%= sidebar_current("docs-vcd-resource-network-routed") %>>
+              <a href="/docs/providers/vcd/r/network_routed.html">vcd_network_routed</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-network-routed-v2") %>>
+              <a href="/docs/providers/vcd/r/network_routed_v2.html">vcd_network_routed_v2</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-network-imported") %>>
+              <a href="/docs/providers/vcd/r/nsxt_network_imported.html">vcd_nsxt_network_imported</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-network-direct") %>>
+              <a href="/docs/providers/vcd/r/network_direct.html">vcd_network_direct</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-network-isolated") %>>
+              <a href="/docs/providers/vcd/r/network_isolated.html">vcd_network_isolated</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-network-isolated-v2") %>>
+              <a href="/docs/providers/vcd/r/network_isolated_v2.html">vcd_network_isolated_v2</a>
+            </li>            
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-network-dhcp") %>>
+              <a href="/docs/providers/vcd/r/nsxt_network_dhcp.html">vcd_nsxt_network_dhcp</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-network-dhcp-binding") %>>
+              <a href="/docs/providers/vcd/r/nsxt_network_dhcp_binding.html">vcd_nsxt_network_dhcp_binding</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-edgegateway") %>>
+              <a href="/docs/providers/vcd/r/edgegateway.html">vcd_edgegateway</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-edgegateway-settings") %>>
+              <a href="/docs/providers/vcd/r/edgegateway_settings.html">vcd_edgegateway_settings</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-edgegateway-vpn") %>>
+              <a href="/docs/providers/vcd/r/edgegateway_vpn.html">vcd_edgegateway_vpn</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vapp") %>>
+              <a href="/docs/providers/vcd/r/vapp.html">vcd_vapp</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vapp-access-control") %>>
+              <a href="/docs/providers/vcd/r/vapp_access_control.html">vcd_vapp_access_control</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vapp-network") %>>
+              <a href="/docs/providers/vcd/r/vapp_network.html">vcd_vapp_network</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vapp-org-network") %>>
+              <a href="/docs/providers/vcd/r/vapp_org_network.html">vcd_vapp_org_network</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vapp-firewall-rules") %>>
+              <a href="/docs/providers/vcd/r/vapp_firewall_rules.html">vcd_vapp_firewall_rules</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vapp-nat-rules") %>>
+              <a href="/docs/providers/vcd/r/vapp_nat_rules.html">vcd_vapp_nat_rules</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vapp-static-routing") %>>
+              <a href="/docs/providers/vcd/r/vapp_static_routing.html">vcd_vapp_static_routing</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vapp-vm") %>>
+              <a href="/docs/providers/vcd/r/vapp_vm.html">vcd_vapp_vm</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vm") %>>
+              <a href="/docs/providers/vcd/r/vm.html">vcd_vm</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vm-affinity-rule") %>>
+              <a href="/docs/providers/vcd/r/vm_affinity_rule.html">vcd_vm_affinity_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vm-sizing-policy") %>>
+              <a href="/docs/providers/vcd/r/vm_sizing_policy.html">vcd_vm_sizing_policy</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vm-placement-policy") %>>
+              <a href="/docs/providers/vcd/r/vm_placement_policy.html">vcd_vm_placement_policy</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-vm-internal-disk") %>>
+              <a href="/docs/providers/vcd/r/vm_internal_disk.html">vcd_vm_internal_disk</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-independent-disk") %>>
+              <a href="/docs/providers/vcd/r/independent_disk.html">vcd_independent_disk</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-inserted-media") %>>
+              <a href="/docs/providers/vcd/r/inserted_media.html">vcd_inserted_media</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-lb-service-monitor") %>>
+              <a href="/docs/providers/vcd/r/lb_service_monitor.html">vcd_lb_service_monitor</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-lb-server-pool") %>>
+              <a href="/docs/providers/vcd/r/lb_server_pool.html">vcd_lb_server_pool</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-lb-app-profile") %>>
+              <a href="/docs/providers/vcd/r/lb_app_profile.html">vcd_lb_app_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-lb-app-rule") %>>
+              <a href="/docs/providers/vcd/r/lb_app_rule.html">vcd_lb_app_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-lb-virtual-server") %>>
+              <a href="/docs/providers/vcd/r/lb_virtual_server.html">vcd_lb_virtual_server</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxv-dnat") %>>
+              <a href="/docs/providers/vcd/r/nsxv_dnat.html">vcd_nsxv_dnat</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxv-snat") %>>
+              <a href="/docs/providers/vcd/r/nsxv_snat.html">vcd_nsxv_snat</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxv-firewall-rule") %>>
+              <a href="/docs/providers/vcd/r/nsxv_firewall_rule.html">vcd_nsxv_firewall_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-ipset") %>>
+              <a href="/docs/providers/vcd/r/nsxv_ip_set.html">vcd_nsxv_ip_set</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxv-dhcp-relay") %>>
+              <a href="/docs/providers/vcd/r/nsxv_dhcp_relay.html">vcd_nsxv_dhcp_relay</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edge-gateway") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway.html">vcd_nsxt_edgegateway</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-ip-set") %>>
+              <a href="/docs/providers/vcd/r/nsxt_ip_set.html">vcd_nsxt_ip_set</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-security-group") %>>
+              <a href="/docs/providers/vcd/r/nsxt_security_group.html">vcd_nsxt_security_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-role") %>>
+              <a href="/docs/providers/vcd/r/role.html">vcd_role</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-global-role") %>>
+              <a href="/docs/providers/vcd/r/global_role.html">vcd_global_role</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-rights-bundle") %>>
+              <a href="/docs/providers/vcd/r/rights_bundle.html">vcd_rights_bundle</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-nat-rule") %>>
+              <a href="/docs/providers/vcd/r/nsxt_nat_rule.html">vcd_nsxt_nat_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-firewall") %>>
+              <a href="/docs/providers/vcd/r/nsxt_firewall.html">vcd_nsxt_firewall</a>
+            </li> 
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-app-port-profile") %>>
+              <a href="/docs/providers/vcd/r/nsxt_app_port_profile.html">vcd_nsxt_app_port_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-ipsec-vpn-tunnel") %>>
+              <a href="/docs/providers/vcd/r/nsxt_ipsec_vpn_tunnel.html">vcd_nsxt_ipsec_vpn_tunnel</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edgegateway-l2-vpn-tunnel") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway_l2_vpn_tunnel.html">vcd_nsxt_edgegateway_l2_vpn_tunnel</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-alb-controller") %>>
+              <a href="/docs/providers/vcd/r/nsxt_alb_controller.html">vcd_nsxt_alb_controller</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-alb-cloud") %>>
+              <a href="/docs/providers/vcd/r/nsxt_alb_cloud.html">vcd_nsxt_alb_cloud</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-alb-service-engine-group") %>>
+              <a href="/docs/providers/vcd/r/nsxt_alb_service_engine_group.html">vcd_nsxt_alb_service_engine_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-alb-settings") %>>
+              <a href="/docs/providers/vcd/r/nsxt_alb_settings.html">vcd_nsxt_alb_settings</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-alb-pool") %>>
+              <a href="/docs/providers/vcd/r/nsxt_alb_pool.html">vcd_nsxt_alb_pool</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-alb-virtual-service") %>>
+              <a href="/docs/providers/vcd/r/nsxt_alb_virtual_service.html">vcd_nsxt_alb_virtual_service</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-alb-edgegateway-service-engine-group") %>>
+              <a href="/docs/providers/vcd/r/nsxt_alb_edgegateway_service_engine_group.html">vcd_nsxt_alb_edgegateway_service_engine_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-certificate-library") %>>
+              <a href="/docs/providers/vcd/r/certificate_library.html">vcd_library_certificate</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vdc-group") %>>
+              <a href="/docs/providers/vcd/r/vdc_group.html">vcd_vdc_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-distributed-firewall") %>>
+              <a href="/docs/providers/vcd/r/nsxt_distributed_firewall.html">vcd_nsxt_distributed_firewall</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-distributed-firewall-rule") %>>
+              <a href="/docs/providers/vcd/r/nsxt_distributed_firewall_rule.html">vcd_nsxt_distributed_firewall_rule</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edgegateway-bgp-neighbor") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway_bgp_neighbor.html">vcd_nsxt_edgegateway_bgp_neighbor</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edgegateway-bgp-ip-prefix-list") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway_bgp_ip_prefix_list.html">vcd_nsxt_edgegateway_bgp_ip_prefix_list</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-dynamic-security-group") %>>
+              <a href="/docs/providers/vcd/r/nsxt_dynamic_security_group.html">vcd_nsxt_dynamic_security_group</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edgegateway-bgp-configuration") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway_bgp_configuration.html">vcd_nsxt_edgegateway_bgp_configuration</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxv-distributed-firewall") %>>
+              <a href="/docs/providers/vcd/r/nsxv_distributed_firewall.html">vcd_nsxv_distributed_firewall</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-org-ldap") %>>
+              <a href="/docs/providers/vcd/r/org_ldap.html">vcd_org_ldap</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-catalog-access-control") %>>
+              <a href="/docs/providers/vcd/r/catalog_access_control.html">vcd_catalog_access_control</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-rde-interface") %>>
+              <a href="/docs/providers/vcd/r/rde_interface.html">vcd_rde_interface</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-rde-interface-behavior") %>>
+              <a href="/docs/providers/vcd/r/rde_interface_behavior.html">vcd_rde_interface_behavior</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-rde-type") %>>
+              <a href="/docs/providers/vcd/r/rde_type.html">vcd_rde_type</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-rde-type-behavior") %>>
+              <a href="/docs/providers/vcd/r/rde_type_behavior.html">vcd_rde_type_behavior</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-rde-type-behavior-acl") %>>
+              <a href="/docs/providers/vcd/r/rde_type_behavior_acl.html">vcd_rde_type_behavior_acl</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-rde") %>>
+              <a href="/docs/providers/vcd/r/rde.html">vcd_rde</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edge-rate-limiting") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway_rate_limiting.html">vcd_nsxt_edgegateway_rate_limiting</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-ip-space") %>>
+              <a href="/docs/providers/vcd/r/ip_space.html">vcd_ip_space</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-ip-space-uplink") %>>
+              <a href="/docs/providers/vcd/r/ip_space_uplink.html">vcd_ip_space_uplink</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-ip-space-ip-allocation") %>>
+              <a href="/docs/providers/vcd/r/ip_space_ip_allocation.html">vcd_ip_space_ip_allocation</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-ip-space-custom-quota") %>>
+              <a href="/docs/providers/vcd/r/ip_space_custom_quota.html">vcd_ip_space_custom_quota</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edge-dhcp-forwarding") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway_dhcp_forwarding.html">vcd_nsxt_edgegateway_dhcp_forwarding</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edge-dhcpv6") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway_dhcpv6.html">vcd_nsxt_edgegateway_dhcpv6</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-org-saml") %>>
+              <a href="/docs/providers/vcd/r/org_saml.html">vcd_org_saml</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-org-oidc") %>>
+              <a href="/docs/providers/vcd/r/org_oidc.html">vcd_org_oidc</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edgegateway-static-route") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway_static_route.html">vcd_nsxt_edgegateway_static_route</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-api-token") %>>
+              <a href="/docs/providers/vcd/r/api_token.html">vcd_api_token</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-service-account") %>>
+              <a href="/docs/providers/vcd/r/service_account.html">vcd_service_account</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-provider-vdc") %>>
+              <a href="/docs/providers/vcd/r/provider_vdc.html">vcd_provider_vdc</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-org-vdc-template") %>>
+              <a href="/docs/providers/vcd/r/org_vdc_template.html">vcd_org_vdc_template</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-org-vdc-template-instance") %>>
+              <a href="/docs/providers/vcd/r/org_vdc_template_instance.html">org_vdc_template_instance</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-cloned-vapp") %>>
+              <a href="/docs/providers/vcd/r/cloned_vapp.html">vcd_cloned_vapp</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-ui-plugin") %>>
+              <a href="/docs/providers/vcd/r/ui_plugin.html">vcd_ui_plugin</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-network-pool") %>>
+              <a href="/docs/providers/vcd/r/network_pool.html">vcd_network_pool</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-segment-profile-template") %>>
+              <a href="/docs/providers/vcd/r/nsxt_segment_profile_template.html">vcd_nsxt_segment_profile_template</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-segment-profile-template") %>>
+              <a href="/docs/providers/vcd/r/nsxt_global_default_segment_profile_template.html">vcd_nsxt_global_default_segment_profile_template</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vcd-org-vdc-nsxt-network-profile") %>>
+              <a href="/docs/providers/vcd/r/org_vdc_nsxt_network_profile.html">vcd_org_vdc_nsxt_network_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-network-segment-profile") %>>
+              <a href="/docs/providers/vcd/r/nsxt_network_segment_profile.html">vcd_nsxt_network_segment_profile</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-nsxt-edgegateway-dns") %>>
+              <a href="/docs/providers/vcd/r/nsxt_edgegateway_dns.html">vcd_nsxt_edgegateway_dns</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-vm-vgpu-policy") %>>
+              <a href="/docs/providers/vcd/r/vcd_vm_vgpu_policy.html">vcd_vm_vgpu_policy</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-cse-kubernetes-cluster") %>>
+              <a href="/docs/providers/vcd/r/cse_kubernetes_cluster.html">vcd_cse_kubernetes_cluster</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-solution-landing-zone") %>>
+              <a href="/docs/providers/vcd/r/solution_landing_zone.html">vcd_solution_landing_zone</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-solution-add-on") %>>
+              <a href="/docs/providers/vcd/r/solution_add_on.html">vcd_solution_add_on</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-solution-add-on-instance") %>>
+              <a href="/docs/providers/vcd/r/solution_add_on_instance.html">vcd_solution_add_on_instance</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-solution-add-on-instance-publish") %>>
+              <a href="/docs/providers/vcd/r/solution_add_on_instance_publish.html">vcd_solution_add_on_instance_publish</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-dse-registry-configuration") %>>
+              <a href="/docs/providers/vcd/r/dse_registry_configuration.html">vcd_dse_registry_configuration</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-dse-solution-publish") %>>
+              <a href="/docs/providers/vcd/r/dse_solution_publish.html">vcd_dse_solution_publish</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-multisite-site-association") %>>
+              <a href="/docs/providers/vcd/r/multisite_site_association.html">vcd_multisite_site_association</a>
+            </li>
+            <li<%= sidebar_current("docs-vcd-resource-multisite-org-association") %>>
+              <a href="/docs/providers/vcd/r/multisite_org_association.html">vcd_multisite_org_association</a>
+            </li>
+           </ul>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= yield %>
+<% end %>
