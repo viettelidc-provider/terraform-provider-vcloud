@@ -29,8 +29,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/vmware/go-vcloud-director/v2/govcd"
-	"github.com/vmware/go-vcloud-director/v2/util"
+	"github.com/vmware/go-vcloud-director/v3/govcd"
+	"github.com/vmware/go-vcloud-director/v3/util"
 )
 
 // #nosec G101 -- These credentials are fake for testing purposes
@@ -162,6 +162,7 @@ type TestConfig struct {
 	Nsxt struct {
 		Manager                   string `json:"manager"`
 		Tier0router               string `json:"tier0router"`
+		Tier0routerInterface      string `json:"tier0routerInterface"`
 		Tier0routerVrf            string `json:"tier0routervrf"`
 		GatewayQosProfile         string `json:"gatewayQosProfile"`
 		NsxtDvpg                  string `json:"nsxtDvpg"`
